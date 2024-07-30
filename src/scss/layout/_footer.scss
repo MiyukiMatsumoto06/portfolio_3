@@ -1,3 +1,150 @@
-.footer {
-	color: #fff;
+.l-footer {
+  padding: 40px 30px 40px 40px;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 1px;
+      height: 15px;
+      background-color: #fff;
+      margin: 0 15px;
+      opacity: 0.25;
+    }
+
+    &:last-child::after {
+      margin: 0;
+    }
+  }
+
+  &__link {
+    padding: 10px 0;
+    color: #fff;
+    font-family: 'Noto Sans JP', 'Noto Sans CJK JP', 'Noto Sans Japanese',
+      'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W6', 'ヒラギノ角ゴシック',
+      'Hiragino Sans', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic',
+      sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    opacity: 0.5;
+    width: 120px;
+    margin-right: 25px;
+  }
+
+  &__copyright {
+    opacity: 0.5;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__heading {
+    margin-right: 20px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1;
+  }
+
+  &__sns {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// SP表示　768px以下
+@media screen and (max-width: 768px) {
+  .l-footer {
+    padding: 20px 20px 30px 20px;
+
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+
+      &::after {
+        content: none;
+      }
+
+      &:nth-child(2)::after {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 1px;
+        background-color: #fff;
+        margin: 15px 0;
+        opacity: 0.25;
+      }
+    }
+
+    &__link {
+      font-size: 14px;
+      padding: 10px 0;
+    }
+
+    &__link--small {
+      font-weight: 400;
+      font-size: 10px;
+    }
+
+    &__logo {
+      width: 80px;
+      margin-right: 15px;
+    }
+
+    &__copyright {
+      font-size: 10px;
+    }
+
+    &__heading {
+      display: none;
+    }
+
+    &__sns {
+      width: 32px;
+      height: 32px;
+    }
+  }
 }

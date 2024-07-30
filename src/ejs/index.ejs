@@ -1,7 +1,47 @@
-<% var title = "TOP"; var description = "トップのdescription"; %> <% include
-src/ejs/template/_head %>
+<% var title = "LYRA ENVY"; var description = "エレガントで洗練されたスタイルが特徴のアパレルブランドです。細部にまでこだわったデザインで、日常に華やかな魅力をプラスします。"; %>
 
-<a href="/about">to about</a>
-<div class="p-home-bg"></div>
-<div class="p-home-grid"></div>
+<!-- .l-header -->
+<%include src/ejs/template/_head %>
+<!-- .l-main -->
+<main class="l-main">
+  <section class="p-hero">
+    <div class="p-hero__inner">
+      <div class="p-hero__container">
+        <div class="p-hero__box">
+          <p class="p-hero__text">Conscious Couture</p>
+          <p class="p-hero__caption">Dress to Impress<br />with Our Curated Collections</p>
+        </div>
+
+        <!-- slider -->
+        <div class="p-slider">
+          <ul class="p-slider__list"></ul>
+          <script>
+            const sliderList = document.getElementsByClassName('p-slider__list')[0]
+            for (let i = 0; i < 10; i++) {
+              const sliderItem = document.createElement('li')
+              sliderItem.classList.add('p-slider__item')
+              sliderItem.innerHTML = `<div class="p-slider__image"></div>`
+              sliderList.appendChild(sliderItem)
+            }
+          </script>
+        </div>
+        <h1 class="p-hero__logo">
+          <img src="assets/images/logo.png" alt="ロゴ" />
+          <span class="p-hero__description">Sophisticated style that brings out your charm</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- .l-footer -->
 <% include src/ejs/template/_footer %>
+
+<ul>
+  <li>
+    <div></div>
+  </li>
+  <li>
+    <div></div>
+  </li>
+</ul>
