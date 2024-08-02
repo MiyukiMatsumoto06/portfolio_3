@@ -15,22 +15,22 @@
     padding-right: 15px;
   }
 
-  &__image {
+  &__item img {
     width: 100%;
     height: 100%;
-    background-position: center center;
-    background-size: cover;
+    object-fit: cover;
   }
+}
 
-  &__item:nth-of-type(1) .p-slider__image {
-    background-image: url(../images/slider_01.jpg);
-  }
+// SP表示　768px以下
+@media screen and (max-width: 768px) {
+  .p-slider {
+    width: 80%;
 
-  &__item:nth-of-type(2) .p-slider__image {
-    background-image: url(../images/slider_02.jpg);
-  }
-
-  &__item:nth-of-type(3) .p-slider__image {
-    background-image: url(../images/slider_03.jpg);
+    &__item {
+      width: 275px;
+      height: 450px;
+      padding-right: 5px;
+    }
   }
 }

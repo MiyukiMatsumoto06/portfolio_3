@@ -21,5 +21,37 @@
 </div>
 </footer>
 </div><!-- l-wrap -->
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+
+  $('.p-slider__list').slick({
+		arrows: false,
+		autoplay: true,
+		autoplaySpeed: 0,
+		speed: 9000,
+		infinite: true,
+		pauseOnHover: false,
+		pauseOnFocus: false,
+		cssEase: 'linear',
+		slidesToShow: 3,
+		slidesToScroll: 1,
+    variableWidth: true,
+  });
+		responsive: [
+			{
+			breakpoint: 769,
+			settings: {
+				slidesToShow: 2
+			}
+		}
+
+	]
+
+</script>
+
 </body>
 </html>

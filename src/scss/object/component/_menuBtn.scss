@@ -2,7 +2,8 @@
   display: none;
 }
 
-@media screen and (max-width: 992px) {
+// SP表示　1060px以下
+@media screen and (max-width: 1060px) {
   .c-menuBtn {
     display: flex;
     position: relative;

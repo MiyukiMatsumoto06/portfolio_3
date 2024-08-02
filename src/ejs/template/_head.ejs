@@ -10,7 +10,7 @@
 <meta property="og:title" content="<%= title %>" />
 <meta property="og:description" content="<%= description %>" />
 <meta property="og:url" content="https://miyukimatsumoto06.github.io/portfolio_3/public/" />
-<meta property="og:image" content="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /><!--絶対パスで記述-->
+<meta property="og:image" content="https://pixabay.com/get/ge1b6517220141cd4f8e71e08065c8faabb1f57f0f003374fdd14967423990937ee0ddaf3e3b7766e75cdc31a8dd48f19d4c086b3d9733fa1e9ec106ff0be6ae5_1920.jpg" /><!--絶対パスで記述-->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="<%= title %>" />
 <meta property="og:locale" content="ja_JP" />
@@ -20,7 +20,11 @@
 <meta name="twitter:title" content="<%= title %>" />
 <meta name="twitter:url" content="https://miyukimatsumoto06.github.io/portfolio_3/public/" />
 <meta name="twitter:description" content="<%= description %>" />
-<meta name="twitter:image" content="" /><!--絶対パスで記述-->
+<meta name="twitter:image" content="https://pixabay.com/get/ge1b6517220141cd4f8e71e08065c8faabb1f57f0f003374fdd14967423990937ee0ddaf3e3b7766e75cdc31a8dd48f19d4c086b3d9733fa1e9ec106ff0be6ae5_1920.jpg" /><!--絶対パスで記述-->
+
+<!-- slick -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
 <title><%= title %></title>
 </head>
@@ -85,9 +89,9 @@
 
       </nav>
 
-      <div class="l-header__logo">
-        <a href="#"><img src="assets/images/logo.png" alt="ロゴ"></a>
-      </div>
+      <!-- <div class="l-header__logo"> -->
+        <a href="#" class="l-header__logo"><img src="assets/images/logo.png" alt="ロゴ"></a>
+      <!-- </div> -->
 
       <ul class="l-header__box">
         <li class="l-header__login">

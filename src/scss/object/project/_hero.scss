@@ -7,6 +7,7 @@
   }
 
   &__container {
+    position: relative;
     display: flex;
     width: 100%;
   }
@@ -35,10 +36,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 680px;
-    font-size: 24px;
-    font-size: 2.4rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-size: 2.6rem;
+    line-height: 1.5;
     transform: rotate(90deg);
+  }
+
+  &__br {
+    display: block;
   }
 
   &__logo {
@@ -55,5 +61,69 @@
 
   &__description {
     margin: 15px auto 0;
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: -50px;
+    right: 80px;
+    z-index: 9;
+    width: 170px;
+    height: 170px;
+    animation: rotation 30s linear infinite;
+  }
+}
+
+// SP表示　768px以下
+@media screen and (max-width: 768px) {
+  .p-hero {
+    &__inner {
+      padding: 30px 0 40px;
+    }
+
+    &__box {
+      text-align: center;
+      width: 20%;
+      height: 450px;
+    }
+
+    &__text {
+      left: 9%;
+      bottom: 140px;
+      font-size: 10px;
+      font-size: 1rem;
+    }
+
+    &__caption {
+      margin-top: -175px;
+      white-space: nowrap;
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+
+    &__br {
+      display: none;
+    }
+
+    &__logo {
+      width: 190px;
+      height: 89px;
+    }
+
+    &__description {
+      width: 70%;
+      margin: 10px auto 0;
+      font-size: 14px;
+      font-size: 1.4rem;
+    }
+
+    &__scroll {
+      width: 100px;
+      height: 100px;
+      bottom: -30px;
+      right: -10px;
+      transform: rotate(90deg);
+      transform-origin: center center;
+    }
   }
 }

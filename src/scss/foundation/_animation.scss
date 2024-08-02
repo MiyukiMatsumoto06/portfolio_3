@@ -1,8 +1,19 @@
-// animation-name: ; //keyframes
-// animation-duration: ; //duration
-// animation-timing-function: ; //easing
-// animation-delay: ; //delay
-// animation-iteration-count: ; // 1,3,infinite
-// animation-direction: ; //normal,reverse,alternate,alternate-reverse
-// animation-fill-mode: ; //none,forwards,backwards,both
-// animation-play-state: ; //running,paused (animationを止める)
+// 回転
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+// 右から左に流す
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
