@@ -1,0 +1,21 @@
+.c-title {
+  text-align: center;
+  margin: 0 auto 50px;
+  color: #d5a499;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  font-size: 1.3rem;
+  letter-spacing: 0;
+}
+
+.c-title--white {
+  color: #fff;
+}
+
+// SP表示　768px以下
+@media screen and (max-width: 768px) {
+  .c-title {
+    margin: 0 auto 30px;
+  }
+}

@@ -1,0 +1,104 @@
+.p-shop {
+  &__inner {
+    position: relative;
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    left: -200px;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__image img {
+    height: 700px;
+  }
+
+  &__wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__box {
+    width: 400px;
+    margin-top: 100px;
+    padding: 50px 30px 40px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    color: #d5a499;
+    font-family: 'Noto Sans JP', 'Noto Sans CJK JP', 'Noto Sans Japanese', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W6', ヒラギノ角ゴシック, 'Hiragino Sans', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    font-size: 2.2rem;
+  }
+
+  &__group {
+    font-size: 13px;
+    font-size: 1.3rem;
+    line-height: 2;
+  }
+
+  &__bold {
+    font-weight: bold;
+  }
+
+  &__btn {
+    text-align: center;
+  }
+}
+
+// SP表示　768px以下
+@media screen and (max-width: 768px) {
+  .p-shop {
+    &__image {
+      left: 0;
+    }
+
+    &__image img {
+      height: 300px;
+    }
+
+    &__wrap {
+      position: relative;
+    }
+
+    &__container {
+      max-width: auto;
+      padding: 0 20px;
+    }
+
+    &__box {
+      width: 100%;
+      padding: 40px 30px 30px;
+      margin-top: -100px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-size: 1.8rem;
+    }
+
+    &__btn {
+      margin-top: 15px;
+    }
+  }
+}

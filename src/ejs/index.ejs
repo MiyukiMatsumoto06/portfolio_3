@@ -37,43 +37,43 @@
 
   <!-- .p-about -->
   <section class="p-about">
-    <div class="p-about__inner">
+    <div class="p-about__inner u-mb">
       <div class="p-about__container">
         <div class="p-about__bg">
-          <h2 class="p-about__title">About LYRA ENVY</h2>
+          <h2 class="c-title">About LYRA ENVY</h2>
         </div>
       </div>
       <div class="p-about__wrap">
         <div class="p-about__box">
           <div class="p-about__content">
-            <h3 class="p-about__subTitle">Graceful Charm Collection</h3>
+            <h3 class="p-about__title">Graceful Charm Collection</h3>
             <p class="p-about__description">
               LYRA ENVYへようこそ。
               <br /><br />
               エレガンスと可憐な魅力が見事に調和した当コレクションは、
-              <br />
+              <br class="p-about__br" />
               洗練されたスタイルと心を惹きつける美しさを兼ね備えた
               <br />
               アイテムをお届けします。
               <br /><br />
               各アイテムは、精巧なデザインと繊細なディテールが特徴で、
-              <br />
+              <br class="p-about__br" />
               毎日をより一層華やかに彩ります。
               <br /><br />
               クラシックなシルエットからモダンなアレンジまで、
-              <br />
+              <br class="p-about__br" />
               様々なシーンに対応できるバリエーション豊富な
-              <br />
+              <br class="p-about__br" />
               アイテムを取り揃えています。
               <br />
               <br />
               私たちのコレクションは、美しさだけでなく快適さも
-              <br />
+              <br class="p-about__br" />
               兼ね備えており、デザイン性と着心地の両方を実現しています。
               <br />
               <br />
               洗練されたファッションと共に快適さも追求したアイテムから、
-              <br />
+              <br class="p-about__br" />
               あなただけの素敵なスタイルを見つけてください。
             </p>
           </div>
@@ -83,8 +83,311 @@
         <div class="p-about__image"></div>
         <div class="p-about__eyecatch">
           <p class="p-about__text">LYRA ENVY: Modern Chic Meets Timeless Grace.</p>
+          <p class="p-about__text">LYRA ENVY: Modern Chic Meets Timeless Grace.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- .p-ranking -->
+  <section class="p-ranking">
+    <div class="p-ranking__inner u-mb">
+      <h2 class="c-title c-title--white">RANKING</h2>
+      <div class="p-ranking__area">
+        <ul class="p-ranking__list"></ul>
+
+        <script>
+          const rankingList = document.getElementsByClassName('p-ranking__list')[0]
+
+          const rankingData = [
+            {
+              image: 'assets/images/ranking_01.jpg',
+              name: 'ワンピース',
+              price: '¥17,000',
+              description: 'エレガントなデザインと繊細な花柄が調和したワンピース。上質な素材を使用しており、着心地も抜群です。優雅なフローラルプリントは、春から夏にかけての季節にぴったりで、軽やかで華やかな印象を与えます。',
+            },
+            {
+              image: 'assets/images/ranking_02.jpg',
+              name: 'ショルダーバッグ',
+              price: '¥13,000',
+              description: '端正なシルエットとシルバーチェーンストラップが、クラシカルな印象を放つショルダーバッグ。どんなスタイリングとも相性良く、装いに映えるベーシックカラーが魅力の定番アイテムです。',
+            },
+            {
+              image: 'assets/images/ranking_03.jpg',
+              name: 'パンプス',
+              price: '¥15,000',
+              description: '細身で美しいシルエットに拘ったポインテッドトウパンプス。あらゆる装飾をそぎ落としたミニマルなデザインはデイリーユースとしても履きやすく、洗練された大人のフェミニンなスタイリングをお楽しみいただけます。',
+            },
+          ]
+
+          rankingData.forEach((item) => {
+            const rankingItem = document.createElement('li')
+            rankingItem.classList.add('p-ranking__item')
+
+            rankingItem.innerHTML = `
+            <div class="p-ranking__image"><img src="${item.image}" alt="${item.name}"></div>
+            <div class="p-ranking__box">
+              <p class="p-ranking__name">${item.name}</p>
+              <p class="p-ranking__price">${item.price}</p>
+              <p class="p-ranking__description">${item.description}</p>
+            </div>
+            `
+            rankingList.appendChild(rankingItem)
+          })
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- .p-story -->
+  <section class="p-story">
+    <div class="p-story__inner">
+      <h2 class="c-title c-title--white">Brand Story</h2>
+      <div class="p-story__container">
+        <div class="p-story__box">
+          <h3 class="p-story__title">Fusion of Elegance <br class="p-story__sp" />and Charm</h3>
+          <p class="p-story__description">
+            私たちはエレガンスと可憐さが織り成すファッションの新しい時代を切り拓いています。<br class="p-story__pc" />
+            LYRA ENVYのコレクションは、クラシックな美しさと現代のトレンドが共存したアイテムを提供します。
+          </p>
+          <button class="c-viewBtn">
+            <a href="#" class="c-viewBtn__link">VIEW MORE</a>
+          </button>
+        </div>
+        <div class="p-story__image">
+          <img src="assets/images/story_01.png" alt="イメージ" />
+        </div>
+      </div>
+      <div class="p-story__eyecatch">
+        <p class="p-story__text">Brand Story.Brand Story.Brand Story.Brand Story.</p>
+        <p class="p-story__text">Brand Story.Brand Story.Brand Story.Brand Story</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- .p-product -->
+  <section class="p-product">
+    <h2 class="c-title c-title--white">Product</h2>
+    <div class="p-product__inner u-mb">
+      <div class="p-product__container">
+        <div class="p-product__content">
+          <div class="p-product__image">
+            <img src="assets/images/product_01.jpg" alt="ワンピース" />
+          </div>
+        </div>
+        <div class="p-product__wrap">
+          <p class="p-product__description">
+            洗練されたデザインとエレガントな<br />
+            シルエットが特徴のワンピース
+          </p>
+          <p class="p-product__name">Dress<span class="p-product__jp">ワンピース</span></p>
+          <p class="p-product__price">¥20,000<span class="p-product__tax">税込</span></p>
+          <button class="c-viewBtn">
+            <a href="#" class="c-viewBtn__link">VIEW MORE</a>
+          </button>
+        </div>
+      </div>
+      <ul class="p-product__list"></ul>
+
+      <script>
+        const productList = document.getElementsByClassName('p-product__list')[0]
+
+        const productData = [
+          {
+            image: 'assets/images/product_04.png',
+            name: 'パンプス',
+            price: '¥16,000',
+          },
+          {
+            image: 'assets/images/product_06.png',
+            name: 'ハンドバッグ',
+            price: '¥13,000',
+          },
+          {
+            image: 'assets/images/product_05.png',
+            name: 'ネックレス',
+            price: '¥8,000',
+          },
+          {
+            image: 'assets/images/product_07.png',
+            name: 'ストローハット',
+            price: '¥9,000',
+          },
+        ]
+
+        productData.forEach((item) => {
+          const productItem = document.createElement('li')
+          productItem.classList.add('p-product__item')
+          productItem.innerHTML = `
+          <a href="#" class="p-product__link">
+          <div class="p-product__thumbnail"><img src="${item.image}" alt="${item.name}" /></div>
+          <div class="p-product__box">
+            <p class="p-product__category">${item.name}</p>
+            <p class="p-product__price p-product__price--small">${item.price}<span class="p-product__tax p-product__tax--large">税込</span></p>
+          </div>
+          </a>
+          `
+          productList.appendChild(productItem)
+        })
+      </script>
+      <div class="p-product__area">
+        <a href="#" class="c-all">Product All</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- .p-news -->
+  <section class="p-news">
+    <div class="p-news__inner u-mb">
+      <h2 class="c-title c-title--white">News</h2>
+
+      <ul class="p-news__list"></ul>
+
+      <script>
+        const newsList = document.getElementsByClassName('p-news__list')[0]
+
+        const newsData = [
+          {
+            date: '2024.07.05',
+            post: '2024年7月5日(金) LYRA ENVY 新宿店 グランドオープン！',
+          },
+          {
+            date: '2024.07.02',
+            post: 'アプリメンバーズ 先行SALE開催！',
+          },
+          {
+            date: '2024.07.01',
+            post: '2024 SUMMER FAIR',
+          },
+        ]
+
+        newsData.forEach((item) => {
+          const newsItem = document.createElement('li')
+          newsItem.classList.add('p-news__item')
+
+          newsItem.innerHTML = `
+               <a href="#" class="p-news__link">
+                  <p class="p-news__date">${item.date}</p>
+                  <p class="p-news__post">${item.post}</p>
+                </a>
+          `
+          newsList.appendChild(newsItem)
+        })
+      </script>
+
+      <div class="p-product__area">
+        <a href="#" class="c-all">Product All</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- .p-shop -->
+  <section class="p-shop">
+    <div class="p-shop__inner u-mb">
+      <div class="p-shop__image">
+        <img src="assets/images/bg_shop.png" alt="店舗" />
+      </div>
+      <div class="p-shop__wrap">
+        <div class="p-shop__container">
+          <div class="p-shop__box">
+            <h2 class="c-title">Shop</h2>
+            <h3 class="p-shop__title">LYRA ENVY 新宿店</h3>
+            <p class="p-shop__group">
+              2024年7月5日(金)よりグランドオープン！<br />
+              <span class="p-shop__bold">営業時間</span><br />
+              11:00-21:00<br />
+              <span class="p-shop__bold">店舗所在地</span><br />
+              東京都新宿区新宿3-38-2
+            </p>
+            <div class="p-shop__btn">
+              <button class="c-viewBtn">
+                <a href="#" class="c-viewBtn__link c-viewBtn__link--reverse">VIEW MORE</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- .p-media -->
+  <section class="p-media">
+    <div class="p-media__inner u-mb">
+      <div class="p-media__container">
+        <h2 class="c-title">Media</h2>
+        <ul class="p-media__list">
+          <li class="p-media__logo">
+            <img src="assets/images/logo_media_01.png" alt="GRACE" />
+          </li>
+          <li class="p-media__logo">
+            <img src="assets/images/logo_media_02.png" alt="FLAIR" />
+          </li>
+          <li class="p-media__logo">
+            <img src="assets/images/logo_media_03.png" alt="WHIRL" />
+          </li>
+          <li class="p-media__logo">
+            <img src="assets/images/logo_media_04.png" alt="Vivid" />
+          </li>
+          <li class="p-media__logo">
+            <img src="assets/images/logo_media_05.png" alt="pulse" />
+          </li>
+          <li class="p-media__logo">
+            <img src="assets/images/logo_media_06.png" alt="Vogue" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- .p-magazine -->
+  <section class="p-magazine">
+    <div class="p-magazine__inner">
+      <h2 class="p-magazine__title">MAGAZINE</h2>
+      <ul class="p-magazine__list"></ul>
+
+      <script>
+        const magazineList = document.getElementsByClassName('p-magazine__list')[0]
+
+        const magazineData = [
+          {
+            image: 'assets/images/magazine_01.png',
+            heading: '2024 SS collection',
+            date: '2024.07.04',
+          },
+          {
+            image: 'assets/images/magazine_02.png',
+            heading: 'SUMMER ITEMS',
+            date: '2024.07.01',
+          },
+          {
+            image: 'assets/images/magazine_03.png',
+            heading: 'LYRA ENVY LOOK BOOK',
+            date: '2024.06.28',
+          },
+        ]
+
+        magazineData.forEach((item) => {
+          const magazineItem = document.createElement('li')
+          magazineItem.classList.add('p-magazine__item')
+
+          magazineItem.innerHTML = `
+          <a href="#" class="p-magazine__link">
+            <div class="p-magazine__image">
+              <img src="${item.image}" alt="MAGAZINE" />
+            </div>
+            <p class="p-magazine__heading">${item.heading}</p>
+            <div class="p-magazine__box">
+              <p class="p-magazine__date">${item.date}</p>
+              <div class="p-magazine__blank"></div>
+            </div>
+          </a>
+          `
+          magazineList.appendChild(magazineItem)
+        })
+      </script>
+      <button class="c-viewBtn">
+        <a href="#" class="c-viewBtn__link c-viewBtn__link--blank">LYRA ENVY MAGAZINE</a>
+      </button>
     </div>
   </section>
 </main>

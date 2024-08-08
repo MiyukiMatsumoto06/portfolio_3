@@ -1,0 +1,116 @@
+.p-ranking {
+  &__area {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    width: 33%;
+    background-color: #fff;
+    border-radius: 5px;
+
+    &::before {
+      position: absolute;
+      display: block;
+      z-index: 2;
+      top: -25px;
+      left: 20px;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 80px;
+      line-height: 1;
+      content: '';
+    }
+
+    &:nth-child(1)::before {
+      content: '1';
+    }
+
+    &:nth-child(2)::before {
+      content: '2';
+    }
+
+    &:nth-child(3)::before {
+      content: '3';
+    }
+  }
+
+  &__image img {
+    border-radius: 5px 5px 0 0;
+  }
+
+  &__box {
+    padding: 20px 30px 30px;
+  }
+
+  &__name {
+    text-align: center;
+    color: #d5a499;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  &__price {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+
+  &__description {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+// SP表示　768px以下
+@media screen and (max-width: 768px) {
+  .p-ranking {
+    &__area {
+      padding: 0 20px;
+    }
+
+    &__list {
+      display: block;
+    }
+
+    &__item {
+      width: 100%;
+      margin-bottom: 23px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        font-size: 50px;
+        top: -15px;
+        left: 10px;
+      }
+    }
+
+    &__box {
+      padding: 20px 25px 25px;
+    }
+
+    &__name {
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+
+    &__price,
+    &__description {
+      font-size: 12px;
+      font-size: 1.2rem;
+    }
+  }
+}

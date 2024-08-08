@@ -1,0 +1,49 @@
+.p-media {
+  &__inner {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  &__container {
+    padding: 80px;
+    background-color: #fff;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  &__logo {
+    width: 18%;
+  }
+}
+
+// SP表示　768px以下
+@media screen and (max-width: 768px) {
+  .p-media {
+    &__container {
+      padding: 40px 40px 50px;
+    }
+
+    &__list {
+      gap: 0;
+    }
+
+    &__logo {
+      width: 48%;
+      margin: 0 8px 15px 0;
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+
+      &:nth-child(5),
+      &:nth-child(6) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

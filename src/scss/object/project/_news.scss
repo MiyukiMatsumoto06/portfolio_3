@@ -1,0 +1,81 @@
+.p-news {
+  &__inner {
+    max-width: 1240px;
+    width: 100%;
+    margin: 0 auto 150px;
+    padding: 0 50px;
+  }
+
+  &__item {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+
+    &:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+  }
+
+  &__link {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 25px 40px 25px 0;
+
+    &::after {
+      display: inline-block;
+      position: absolute;
+      top: calc(50% - 10px);
+      right: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/icn_all.svg);
+      background-size: cover;
+      background-position: center center;
+      transition: transform 0.3s;
+      content: '';
+    }
+  }
+
+  &__date {
+    margin: 0 30px 0 0;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
+
+  &__post {
+    color: rgb(255, 255, 255);
+    font-family: 'Noto Sans JP', 'Noto Sans CJK JP', 'Noto Sans Japanese', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W6', ヒラギノ角ゴシック, 'Hiragino Sans', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    font-size: 1.8rem;
+    transition: transform 0.6s;
+  }
+}
+
+// SP表示　768px以下
+@media screen and (max-width: 768px) {
+  .p-news {
+    &__inner {
+      margin-bottom: 60px;
+      padding: 0 20px;
+    }
+
+    &__link {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px 25px 20px 0;
+    }
+
+    &__date {
+      margin: 0 0 5px 0;
+      font-size: 11px;
+      font-size: 1.1rem;
+    }
+    &__post {
+      font-size: 13px;
+      font-size: 1.3rem;
+    }
+  }
+}

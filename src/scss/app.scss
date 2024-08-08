@@ -25,6 +25,9 @@
 // -----------------------------------------------------------------*/
 
 @use 'object/component/_menuBtn';
+@use 'object/component/_title';
+@use 'object/component/_viewBtn';
+@use 'object/component/_all';
 
 /*// -----------------------------------------------------------------
 // Project
@@ -34,6 +37,13 @@
 @use 'object/project/_hero';
 @use 'object/project/_slider';
 @use 'object/project/_about';
+@use 'object/project/_ranking';
+@use 'object/project/_story';
+@use 'object/project/_product';
+@use 'object/project/_news';
+@use 'object/project/_shop';
+@use 'object/project/_media';
+@use 'object/project/_magazine';
 
 /*// -----------------------------------------------------------------
 // Utility

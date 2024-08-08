@@ -17,3 +17,13 @@
     transform: translate(-100%);
   }
 }
+
+// 左から右に流す
+@keyframes marquee-r {
+  0% {
+    transform: translate(-100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
