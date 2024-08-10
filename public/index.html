@@ -27,12 +27,13 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
 <title>LYRA ENVY</title>
-<link href="assets/stylesheets/bundlee8aea18365e44817bcca.css" rel="stylesheet"></head>
+<link href="assets/stylesheets/bundle5568a2e3d1e23b52d577.css" rel="stylesheet"></head>
 <body>
 <div class="l-wrap">
   <!-- .l-header -->
   <header class="l-header">
     <nav class="p-menu">
+      <div class="p-menu__bg">
       <div class="c-menuBtn">
         <span class="c-menuBtn__bar"></span>
         <span class="c-menuBtn__bar"></span>
@@ -42,23 +43,23 @@
       <ul class="p-menu__list"></ul>
 
       <!-- menu SP表示 -->
-       <div class="p-menu__container">
-        <div class="p-menu__account">
-          <a href="#" class="p-menu__login">ログイン</a>
-        </div>
-         <ul class="p-menu__list p-menu__list--sp"></ul>
-         <div class="p-menu__content">
-          <p class="p-menu__heading">公式アカウント</p>
-          <ul class="p-menu__box">
-            <li class="p-menu__sns">
-              <a href="#"><img src="assets/images/icn_menu_02.svg" alt="Twitter"></a>
-            </li>
-            <li class="p-menu__sns">
-              <a href="#"><img src="assets/images/icn_menu_03.svg" alt="Instagram"></a>
-            </li>
-          </ul>
-         </div>
-       </div>
+         <div class="p-menu__container">
+           <div class="p-menu__account">
+             <a href="#" class="p-menu__login">ログイン</a>
+            </div>
+            <ul class="p-menu__list p-menu__list--sp"></ul>
+            <div class="p-menu__content">
+              <p class="p-menu__heading">公式アカウント</p>
+              <ul class="p-menu__box">
+                <li class="p-menu__sns">
+                  <a href="#"><img src="assets/images/icn_menu_02.svg" alt="Twitter"></a>
+                </li>
+                <li class="p-menu__sns">
+                  <a href="#"><img src="assets/images/icn_menu_03.svg" alt="Instagram"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
     <script>
       const menuList = document.getElementsByClassName("p-menu__list")[0]
@@ -86,12 +87,12 @@
         menuListSp.appendChild(menuItemSp)
       })
       </script>
-
       </nav>
 
-      <!-- <div class="l-header__logo"> -->
+
+      <div class="l-header__logo">
         <a href="#" class="l-header__logo"><img src="assets/images/logo.png" alt="ロゴ"></a>
-      <!-- </div> -->
+      </div>
 
       <ul class="l-header__box">
         <li class="l-header__login">
@@ -104,6 +105,9 @@
           </a>
         </li>
       </ul>
+    </div>
+
+
   </header>
 
 <!-- .l-main -->
@@ -289,9 +293,11 @@
           </p>
           <p class="p-product__name">Dress<span class="p-product__jp">ワンピース</span></p>
           <p class="p-product__price">¥20,000<span class="p-product__tax">税込</span></p>
-          <button class="c-viewBtn">
-            <a href="#" class="c-viewBtn__link">VIEW MORE</a>
-          </button>
+          <div class="p-product__btn">
+            <button class="c-viewBtn">
+              <a href="#" class="c-viewBtn__link">VIEW MORE</a>
+            </button>
+          </div>
         </div>
       </div>
       <ul class="p-product__list"></ul>
@@ -448,7 +454,7 @@
 
   <!-- .p-magazine -->
   <section class="p-magazine">
-    <div class="p-magazine__inner">
+    <div class="p-magazine__inner u-mb">
       <h2 class="p-magazine__title">MAGAZINE</h2>
       <ul class="p-magazine__list"></ul>
 
@@ -482,8 +488,8 @@
             <div class="p-magazine__image">
               <img src="${item.image}" alt="MAGAZINE" />
             </div>
-            <p class="p-magazine__heading">${item.heading}</p>
             <div class="p-magazine__box">
+            <p class="p-magazine__heading">${item.heading}</p>
               <p class="p-magazine__date">${item.date}</p>
               <div class="p-magazine__blank"></div>
             </div>
@@ -492,11 +498,23 @@
           magazineList.appendChild(magazineItem)
         })
       </script>
-      <button class="c-viewBtn">
-        <a href="#" class="c-viewBtn__link c-viewBtn__link--blank">LYRA ENVY MAGAZINE</a>
-      </button>
+      <div class="p-magazine__btn">
+        <button class="c-viewBtn">
+          <a href="#" class="c-viewBtn__link c-viewBtn__link--blank">LYRA ENVY MAGAZINE</a>
+        </button>
+      </div>
     </div>
   </section>
+
+  <!-- .p-banner -->
+  <div class="p-banner">
+    <a href="#" class="p-banner__close">
+      <img src="assets/images/banner_01.webp" alt="クローズ" />
+    </a>
+    <a href="#" class="p-banner__image">
+      <img src="assets/images/banner_02.png" alt="セール" />
+    </a>
+  </div>
 </main>
 
 <!-- .l-footer -->
@@ -554,5 +572,5 @@
 
 </script>
 
-<script type="text/javascript" src="assets/javascripts/bundlee8aea18365e44817bcca.js"></script></body>
+<script type="text/javascript" src="assets/javascripts/bundle5568a2e3d1e23b52d577.js"></script></body>
 </html>

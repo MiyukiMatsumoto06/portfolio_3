@@ -33,6 +33,7 @@
   <!-- .l-header -->
   <header class="l-header">
     <nav class="p-menu">
+      <div class="p-menu__bg">
       <div class="c-menuBtn">
         <span class="c-menuBtn__bar"></span>
         <span class="c-menuBtn__bar"></span>
@@ -42,23 +43,23 @@
       <ul class="p-menu__list"></ul>
 
       <!-- menu SP表示 -->
-       <div class="p-menu__container">
-        <div class="p-menu__account">
-          <a href="#" class="p-menu__login">ログイン</a>
-        </div>
-         <ul class="p-menu__list p-menu__list--sp"></ul>
-         <div class="p-menu__content">
-          <p class="p-menu__heading">公式アカウント</p>
-          <ul class="p-menu__box">
-            <li class="p-menu__sns">
-              <a href="#"><img src="assets/images/icn_menu_02.svg" alt="Twitter"></a>
-            </li>
-            <li class="p-menu__sns">
-              <a href="#"><img src="assets/images/icn_menu_03.svg" alt="Instagram"></a>
-            </li>
-          </ul>
-         </div>
-       </div>
+         <div class="p-menu__container">
+           <div class="p-menu__account">
+             <a href="#" class="p-menu__login">ログイン</a>
+            </div>
+            <ul class="p-menu__list p-menu__list--sp"></ul>
+            <div class="p-menu__content">
+              <p class="p-menu__heading">公式アカウント</p>
+              <ul class="p-menu__box">
+                <li class="p-menu__sns">
+                  <a href="#"><img src="assets/images/icn_menu_02.svg" alt="Twitter"></a>
+                </li>
+                <li class="p-menu__sns">
+                  <a href="#"><img src="assets/images/icn_menu_03.svg" alt="Instagram"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
     <script>
       const menuList = document.getElementsByClassName("p-menu__list")[0]
@@ -86,12 +87,12 @@
         menuListSp.appendChild(menuItemSp)
       })
       </script>
-
       </nav>
 
-      <!-- <div class="l-header__logo"> -->
+
+      <div class="l-header__logo">
         <a href="#" class="l-header__logo"><img src="assets/images/logo.png" alt="ロゴ"></a>
-      <!-- </div> -->
+      </div>
 
       <ul class="l-header__box">
         <li class="l-header__login">
@@ -104,4 +105,7 @@
           </a>
         </li>
       </ul>
+    </div>
+
+
   </header>
