@@ -19,6 +19,12 @@ $(() => {
     menuContainer.toggleClass('is-active')
   })
 
+  // メニュークローズ
+  // menuBg.click(function () {
+  //   $(this).toggleClass('is-close')
+  //   menuContainer.toggleClass('is-close')
+  // })
+
   // スライドアップ
   const checkScrollSlideUp = (scrollBottom) => {
     const scrollSlideUp = $('._scrollSlideUp')
