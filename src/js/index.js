@@ -8,22 +8,67 @@ $(() => {
   const hoge = 'hoge'
   console.log(hoge)
 
+  // ロード
+  $(() => {
+    $('.p-hero__logo').fadeIn(1300, () => {
+      $('.p-slider')
+        .css('opacity', '0')
+        .animate({ opacity: 1 }, 500, () => {
+          $('.p-hero__caption').fadeIn(500, () => {
+            $('.p-hero__text').fadeIn(500, () => {
+              $('.p-hero__scroll').fadeIn(500, () => {
+                $('.p-banner').fadeIn(500)
+              })
+            })
+          })
+        })
+    })
+  })
+
+  // $(() => {
+  //   $('.p-hero__logo').fadeIn(2000)
+  //   $('.p-slider').fadeIn(2000)
+  //   $('.p-hero__caption').fadeIn(2000)
+  //   $('.p-hero__text').fadeIn(2000)
+  //   $('.p-hero__scroll').fadeIn(2000)
+  //   $('.p-banner').fadeIn(2000)
+  //   // $('.p-hero__text').addClass('is-load')
+  //   // $('.p-hero__caption').addClass('is-load')
+  //   // $('.p-slider').addClass('is-load')
+  //   // $('.p-hero__logo').addClass('is-load')
+  //   // $('.p-hero__scroll').addClass('is-load')
+  //   // $('.p-banner').addClass('is-load')
+  // })
+
   // メニューボタン
   const menuBg = $('.p-menu__bg')
   const menuBtn = $('.c-menuBtn')
   const menuContainer = $('.p-menu__container')
+  const menuItemSp = $('.p-menu__item--sp')
+  const menuLogin = $('.p-menu__login')
 
-  menuBtn.click(function () {
-    $(this).toggleClass('is-active')
-    menuBg.toggleClass('is-active')
-    menuContainer.toggleClass('is-active')
+  menuBtn.click(() => {
+    menuBg.removeClass('is-close').addClass('is-active')
+    menuContainer.removeClass('is-close').addClass('is-active')
+    menuItemSp.removeClass('is-close').addClass('is-active')
+    menuLogin.removeClass('is-close').addClass('is-active')
   })
 
   // メニュークローズ
-  // menuBg.click(function () {
-  //   $(this).toggleClass('is-close')
-  //   menuContainer.toggleClass('is-close')
-  // })
+  menuBg.click(() => {
+    menuBg.removeClass('is-active').addClass('is-close')
+    menuContainer.removeClass('is-active').addClass('is-close')
+    menuItemSp.removeClass('is-active').addClass('is-close')
+    menuLogin.removeClass('is-active').addClass('is-close')
+  })
+
+  // バナークローズ
+  const banner = $('.p-banner')
+  const bannerClose = $('.p-banner__close')
+
+  bannerClose.click(() => {
+    banner.toggleClass('is-active')
+  })
 
   // スライドアップ
   const checkScrollSlideUp = (scrollBottom) => {
@@ -36,51 +81,6 @@ $(() => {
         $(element).addClass('_isActiveSlideUp')
       } else {
         $(element).removeClass('_isActiveSlideUp')
-      }
-    })
-  }
-
-  // スライドイン
-  const checkScrollSlideIn = (scrollBottom) => {
-    const scrollSlideIn = $('._scrollSlideIn')
-
-    scrollSlideIn.each((index, element) => {
-      const isActive = $(element).offset().top < scrollBottom
-
-      if (isActive) {
-        $(element).addClass('_isActiveSlideIn')
-      } else {
-        $(element).removeClass('_isActiveSlideIn')
-      }
-    })
-  }
-
-  // スライドオン
-  const checkScrollSlideOn = (scrollBottom) => {
-    const scrollSlideOn = $('._scrollSlideOn')
-
-    scrollSlideOn.each((index, element) => {
-      const isActive = $(element).offset().top < scrollBottom
-
-      if (isActive) {
-        $(element).addClass('_isActiveSlideOn')
-      } else {
-        $(element).removeClass('_isActiveSlideOn')
-      }
-    })
-  }
-
-  // スライドレフト
-  const checkScrollSlideRight = (scrollBottom) => {
-    const scrollSlideRight = $('._scrollSlideRight')
-
-    scrollSlideRight.each((index, element) => {
-      const isActive = $(element).offset().top < scrollBottom
-
-      if (isActive) {
-        $(element).addClass('_isActiveSlideRight')
-      } else {
-        $(element).removeClass('_isActiveSlideRight')
       }
     })
   }
@@ -107,9 +107,6 @@ $(() => {
     const scrollBottom = scrollTop + windowHeight
 
     checkScrollSlideUp(scrollBottom)
-    checkScrollSlideIn(scrollBottom)
-    checkScrollSlideOn(scrollBottom)
-    checkScrollSlideRight(scrollBottom)
     checkScrollFadeIn(scrollBottom)
   })
 })

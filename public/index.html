@@ -27,7 +27,7 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
 <title>LYRA ENVY</title>
-<link href="assets/stylesheets/bundle3131151e00aa72de2384.css" rel="stylesheet"></head>
+<link href="assets/stylesheets/bundle8e3b82f591b7f816aab1.css" rel="stylesheet"></head>
 <body>
 <div class="l-wrap">
   <!-- .l-header -->
@@ -42,7 +42,6 @@
       <ul class="p-menu__list"></ul>
 
       <!-- menu SP表示 -->
-      <div class="p-menu__bg">
          <div class="p-menu__container">
            <div class="p-menu__account">
              <a href="#" class="p-menu__login">ログイン</a>
@@ -72,7 +71,9 @@
         menuItem.classList.add("p-menu__item")
 
         menuItem.innerHTML = `
-        <a href="#" class="p-menu__text">${item}</a>
+        <a href="#" class="p-menu__link">
+            <div class="p-menu__mask"> <p class="p-menu__text">${item}</p></div>
+          </a>
         `
         menuList.appendChild(menuItem)
 
@@ -82,12 +83,12 @@
         menuItemSp.classList.add("p-menu__item","p-menu__item--sp")
 
         menuItemSp.innerHTML = `
-        <a href="#" class="p-menu__text p-menu__text--sp">${item}</a>
+        <a href="#" class="p-menu__link p-menu__link--sp">${item}</a>
         `
         menuListSp.appendChild(menuItemSp)
       })
       </script>
-         </div>
+        <div class="p-menu__bg"></div>
       </nav>
 
 
@@ -146,7 +147,7 @@
   </section>
 
   <!-- .p-about -->
-  <section class="p-about">
+  <section class="p-about _scrollFadeIn _scrollSlideUp">
     <div class="p-about__inner u-mb">
       <div class="p-about__container">
         <div class="p-about__bg">
@@ -232,7 +233,7 @@
 
           rankingData.forEach((item) => {
             const rankingItem = document.createElement('li')
-            rankingItem.classList.add('p-ranking__item')
+            rankingItem.classList.add('p-ranking__item', '_scrollFadeIn', '_scrollSlideIn')
 
             rankingItem.innerHTML = `
             <div class="p-ranking__image"><img src="${item.image}" alt="${item.name}"></div>
@@ -254,7 +255,7 @@
     <div class="p-story__inner">
       <h2 class="c-title c-title--white">Brand Story</h2>
       <div class="p-story__container">
-        <div class="p-story__box">
+        <div class="p-story__box _scrollFadeIn _scrollSlideUp">
           <h3 class="p-story__title">Fusion of Elegance <br class="p-story__sp" />and Charm</h3>
           <p class="p-story__description">
             私たちはエレガンスと可憐さが織り成すファッションの新しい時代を切り拓いています。<br class="p-story__pc" />
@@ -264,7 +265,7 @@
             <a href="#" class="c-viewBtn__link">VIEW MORE</a>
           </button>
         </div>
-        <div class="p-story__image">
+        <div class="p-story__image _scrollFadeIn _scrollSlideUp">
           <img src="assets/images/story_01.png" alt="イメージ" />
         </div>
       </div>
@@ -285,7 +286,7 @@
             <img src="assets/images/product_01.jpg" alt="ワンピース" />
           </div>
         </div>
-        <div class="p-product__wrap">
+        <div class="p-product__wrap _scrollFadeIn _scrollSlideUp">
           <p class="p-product__description">
             洗練されたデザインとエレガントな<br />
             シルエットが特徴のワンピース
@@ -299,7 +300,7 @@
           </div>
         </div>
       </div>
-      <ul class="p-product__list"></ul>
+      <ul class="p-product__list _scrollFadeIn _scrollSlideUp"></ul>
 
       <script>
         const productList = document.getElementsByClassName('p-product__list')[0]
@@ -353,7 +354,7 @@
     <div class="p-news__inner u-mb">
       <h2 class="c-title c-title--white">News</h2>
 
-      <ul class="p-news__list"></ul>
+      <ul class="p-news__list _scrollFadeIn _scrollSlideUp"></ul>
 
       <script>
         const newsList = document.getElementsByClassName('p-news__list')[0]
@@ -399,7 +400,7 @@
       <div class="p-shop__image">
         <img src="assets/images/bg_shop.png" alt="店舗" />
       </div>
-      <div class="p-shop__wrap">
+      <div class="p-shop__wrap _scrollFadeIn _scrollSlideUp">
         <div class="p-shop__container">
           <div class="p-shop__box">
             <h2 class="c-title">Shop</h2>
@@ -423,7 +424,7 @@
   </section>
 
   <!-- .p-media -->
-  <section class="p-media">
+  <section class="p-media _scrollFadeIn _scrollSlideUp">
     <div class="p-media__inner u-mb">
       <div class="p-media__container">
         <h2 class="c-title">Media</h2>
@@ -452,7 +453,7 @@
   </section>
 
   <!-- .p-magazine -->
-  <section class="p-magazine">
+  <section class="p-magazine _scrollFadeIn _scrollSlideUp">
     <div class="p-magazine__inner u-mb">
       <h2 class="p-magazine__title">MAGAZINE</h2>
       <ul class="p-magazine__list"></ul>
@@ -507,9 +508,9 @@
 
   <!-- .p-banner -->
   <div class="p-banner">
-    <a href="#" class="p-banner__close">
+    <div class="p-banner__close">
       <img src="assets/images/banner_01.webp" alt="クローズ" />
-    </a>
+    </div>
     <a href="#" class="p-banner__image">
       <img src="assets/images/banner_02.png" alt="セール" />
     </a>
@@ -571,5 +572,5 @@
 
 </script>
 
-<script type="text/javascript" src="assets/javascripts/bundle3131151e00aa72de2384.js"></script></body>
+<script type="text/javascript" src="assets/javascripts/bundle8e3b82f591b7f816aab1.js"></script></body>
 </html>

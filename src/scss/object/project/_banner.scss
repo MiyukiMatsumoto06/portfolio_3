@@ -1,4 +1,5 @@
 .p-banner {
+  display: none;
   position: fixed;
   z-index: 80;
   right: 30px;
@@ -32,4 +33,9 @@
       width: 20px;
     }
   }
+}
+
+// JS
+.p-banner.is-active {
+  display: none;
 }

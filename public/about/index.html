@@ -27,7 +27,7 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
 <title>ABOUT</title>
-<link href="../assets/stylesheets/bundle3131151e00aa72de2384.css" rel="stylesheet"></head>
+<link href="../assets/stylesheets/bundle8e3b82f591b7f816aab1.css" rel="stylesheet"></head>
 <body>
 <div class="l-wrap">
   <!-- .l-header -->
@@ -42,7 +42,6 @@
       <ul class="p-menu__list"></ul>
 
       <!-- menu SP表示 -->
-      <div class="p-menu__bg">
          <div class="p-menu__container">
            <div class="p-menu__account">
              <a href="#" class="p-menu__login">ログイン</a>
@@ -72,7 +71,9 @@
         menuItem.classList.add("p-menu__item")
 
         menuItem.innerHTML = `
-        <a href="#" class="p-menu__text">${item}</a>
+        <a href="#" class="p-menu__link">
+            <div class="p-menu__mask"> <p class="p-menu__text">${item}</p></div>
+          </a>
         `
         menuList.appendChild(menuItem)
 
@@ -82,12 +83,12 @@
         menuItemSp.classList.add("p-menu__item","p-menu__item--sp")
 
         menuItemSp.innerHTML = `
-        <a href="#" class="p-menu__text p-menu__text--sp">${item}</a>
+        <a href="#" class="p-menu__link p-menu__link--sp">${item}</a>
         `
         menuListSp.appendChild(menuItemSp)
       })
       </script>
-         </div>
+        <div class="p-menu__bg"></div>
       </nav>
 
 
@@ -171,5 +172,5 @@
 
 </script>
 
-<script type="text/javascript" src="../assets/javascripts/bundle3131151e00aa72de2384.js"></script></body>
+<script type="text/javascript" src="../assets/javascripts/bundle8e3b82f591b7f816aab1.js"></script></body>
 </html>

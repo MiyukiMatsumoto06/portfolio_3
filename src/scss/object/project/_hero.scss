@@ -18,9 +18,11 @@
     align-items: center;
     width: 30%;
     height: 680px;
+    transition-delay: 1s;
   }
 
   &__text {
+    display: none;
     position: absolute;
     left: 50px;
     bottom: 140px;
@@ -33,9 +35,7 @@
   }
 
   &__caption {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: none;
     font-family: 'Inter', sans-serif;
     font-size: 26px;
     font-size: 2.6rem;
@@ -48,8 +48,10 @@
   }
 
   &__logo {
+    display: none;
     position: absolute;
     text-align: center;
+    z-index: 99;
     width: 400px;
     height: 140px;
     top: 0;
@@ -64,6 +66,7 @@
   }
 
   &__scroll {
+    display: none;
     position: absolute;
     bottom: -50px;
     right: 80px;
@@ -127,3 +130,5 @@
     }
   }
 }
+
+// JS
