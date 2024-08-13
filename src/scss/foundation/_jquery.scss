@@ -1,7 +1,18 @@
+._scrollTitle {
+  display: inline-block;
+  transform: translateY(150%) rotate(30deg);
+  transform-origin: left bottom;
+  transition: transform 0.8s ease-out;
+}
+
+._isActiveTitle {
+  transform: translateY(0) rotate(0);
+}
+
 ._scrollSlideUp {
   transform: translate(0, 3rem);
   transition-property: all;
-  transition-duration: 1.5s;
+  transition-duration: 2s;
 }
 
 ._isActiveSlideUp {
@@ -11,7 +22,7 @@
 ._scrollFadeIn {
   opacity: 0;
   transition-property: all;
-  transition-duration: 1.5s;
+  transition-duration: 2s;
 }
 
 ._isActiveFadeIn {

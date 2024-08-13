@@ -1,7 +1,10 @@
 .p-about {
-  &__inner {
+  &__wrap {
     position: relative;
+    opacity: 0;
     z-index: 2;
+    margin-bottom: 50px;
+    transition: opacity 1.7s;
   }
 
   &__container {
@@ -19,18 +22,17 @@
     background-image: url(../images/bg_about_01.jpg);
   }
 
-  &__wrap {
+  &__item {
     position: absolute;
     top: 0;
-    width: 100%;
-    height: 100%;
+    left: 50px;
   }
 
   &__box {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    padding: 200px 50px 0;
+    padding: 130px 50px 0;
   }
 
   &__content {
@@ -65,7 +67,6 @@
     overflow: hidden;
     width: 100%;
     height: 750px;
-    margin-top: 50px;
   }
 
   &__image {
@@ -73,16 +74,18 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% + 200px);
-    background-position: center center;
+    height: 100%;
     background-size: cover;
+    background-position: center center;
     background-image: url(../images/bg_about_02.jpg);
+    background-repeat: no-repeat;
+    transition: transform 0.2s ease-out;
   }
 
   &__eyecatch {
-    overflow: hidden;
     display: flex;
     position: absolute;
+    z-index: 1;
     bottom: 7px;
     left: 0;
     width: 100%;
@@ -105,6 +108,10 @@
 // SP表示　768px以下
 @media screen and (max-width: 768px) {
   .p-about {
+    &__wrap {
+      margin-bottom: 100px;
+    }
+
     &__container {
       padding: 0 20px;
     }
@@ -115,7 +122,7 @@
       padding-top: 30px;
     }
 
-    &__wrap {
+    &__item {
       left: 20px;
     }
 
@@ -147,11 +154,15 @@
 
     &__area {
       height: 350px;
-      margin-top: 100px;
     }
 
     &__text {
       font-size: 60px;
     }
   }
+}
+
+// JS
+.p-about__wrap.is-active {
+  opacity: 1;
 }

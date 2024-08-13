@@ -1,111 +1,113 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-<meta charset="UTF-8" />
-<meta name="description" content="<%= description %>" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<link rel="icon" href="./assets/images/fav.png" />
-<!--facebook用-->
-<meta property="og:title" content="<%= title %>" />
-<meta property="og:description" content="<%= description %>" />
-<meta property="og:url" content="https://miyukimatsumoto06.github.io/portfolio_3/public/" />
-<meta property="og:image" content="https://images.unsplash.com/photo-1573879500655-98f2012dd1db?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /><!--絶対パスで記述-->
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="<%= title %>" />
-<meta property="og:locale" content="ja_JP" />
-<!--twitter用-->
-<meta name="twitter:card" content="summary_large_image" /><!-- summary summary_large_image photo gallery appから選ぶ -->
-<!-- <meta name="twitter:site" content="" /> --><!--twitterがあれば記述-->
-<meta name="twitter:title" content="<%= title %>" />
-<meta name="twitter:url" content="https://miyukimatsumoto06.github.io/portfolio_3/public/" />
-<meta name="twitter:description" content="<%= description %>" />
-<meta name="twitter:image" content="https://images.unsplash.com/photo-1573879500655-98f2012dd1db?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" /><!--絶対パスで記述-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="<%= description %>" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="./assets/images/favicon.ico" />
+    <!--facebook用-->
+    <meta property="og:title" content="<%= title %>" />
+    <meta property="og:description" content="<%= description %>" />
+    <meta property="og:url" content="https://miyukimatsumoto06.github.io/portfolio_3/public/" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1573879500655-98f2012dd1db?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    <!--絶対パスで記述-->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="<%= title %>" />
+    <meta property="og:locale" content="ja_JP" />
+    <!--twitter用-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- summary summary_large_image photo gallery appから選ぶ -->
+    <!-- <meta name="twitter:site" content="" /> -->
+    <!--twitterがあれば記述-->
+    <meta name="twitter:title" content="<%= title %>" />
+    <meta name="twitter:url" content="https://miyukimatsumoto06.github.io/portfolio_3/public/" />
+    <meta name="twitter:description" content="<%= description %>" />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1573879500655-98f2012dd1db?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    <!--絶対パスで記述-->
 
-<!-- slick -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
-<title><%= title %></title>
-</head>
-<body>
-<div class="l-wrap">
-  <!-- .l-header -->
-  <header class="l-header">
-    <nav class="p-menu">
-      <div class="c-menuBtn">
-        <span class="c-menuBtn__bar"></span>
-        <span class="c-menuBtn__bar"></span>
-        <span class="c-menuBtn__bar"></span>
-      </div>
-      <!-- menu PC表示 -->
-      <ul class="p-menu__list"></ul>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div class="l-wrap">
+      <!-- .l-header -->
+      <header class="l-header">
+        <nav class="p-menu">
+          <div class="c-menuBtn">
+            <span class="c-menuBtn__bar"></span>
+            <span class="c-menuBtn__bar"></span>
+            <span class="c-menuBtn__bar"></span>
+          </div>
+          <!-- menu PC表示 -->
+          <ul class="p-menu__list"></ul>
 
-      <!-- menu SP表示 -->
-         <div class="p-menu__container">
-           <div class="p-menu__account">
-             <a href="#" class="p-menu__login">ログイン</a>
+          <!-- menu SP表示 -->
+          <div class="p-menu__container">
+            <div class="p-menu__account">
+              <a href="#" class="p-menu__login">ログイン</a>
             </div>
             <ul class="p-menu__list p-menu__list--sp"></ul>
             <div class="p-menu__content">
               <p class="p-menu__heading">公式アカウント</p>
               <ul class="p-menu__box">
                 <li class="p-menu__sns">
-                  <a href="#"><img src="assets/images/icn_menu_02.svg" alt="Twitter"></a>
+                  <a href="#"><img src="assets/images/icn_menu_02.svg" alt="Twitter" /></a>
                 </li>
                 <li class="p-menu__sns">
-                  <a href="#"><img src="assets/images/icn_menu_03.svg" alt="Instagram"></a>
+                  <a href="#"><img src="assets/images/icn_menu_03.svg" alt="Instagram" /></a>
                 </li>
               </ul>
             </div>
           </div>
 
-    <script>
-      const menuList = document.getElementsByClassName("p-menu__list")[0]
-      const menuListSp = document.getElementsByClassName("p-menu__list--sp")[0]
-      const menuData = ["Top","About","Product","News","Shop","Magazine"]
+          <script>
+            const menuList = document.getElementsByClassName("p-menu__list")[0];
+            const menuListSp = document.getElementsByClassName("p-menu__list--sp")[0];
+            const menuData = ["Top", "About", "Product", "News", "Shop", "Magazine"];
 
-      menuData.forEach((item)=>{
-        // menu PC表示
-        const menuItem = document.createElement("li")
-        menuItem.classList.add("p-menu__item")
+            menuData.forEach((item) => {
+              // menu PC表示
+              const menuItem = document.createElement("li");
+              menuItem.classList.add("p-menu__item");
 
-        menuItem.innerHTML = `
+              menuItem.innerHTML = `
         <a href="#" class="p-menu__link">
             <div class="p-menu__mask"> <p class="p-menu__text">${item}</p></div>
           </a>
-        `
-        menuList.appendChild(menuItem)
+        `;
+              menuList.appendChild(menuItem);
 
+              // menu SP表示
+              const menuItemSp = document.createElement("li");
+              menuItemSp.classList.add("p-menu__item", "p-menu__item--sp");
 
-        // menu SP表示
-        const menuItemSp = document.createElement("li")
-        menuItemSp.classList.add("p-menu__item","p-menu__item--sp")
-
-        menuItemSp.innerHTML = `
+              menuItemSp.innerHTML = `
         <a href="#" class="p-menu__link p-menu__link--sp">${item}</a>
-        `
-        menuListSp.appendChild(menuItemSp)
-      })
-      </script>
-        <div class="p-menu__bg"></div>
-      </nav>
+        `;
+              menuListSp.appendChild(menuItemSp);
+            });
+          </script>
+          <div class="p-menu__bg"></div>
+        </nav>
 
+        <div class="l-header__logo">
+          <a href="#" class="l-header__logo"><img src="assets/images/logo.png" alt="ロゴ" /></a>
+        </div>
 
-      <div class="l-header__logo">
-        <a href="#" class="l-header__logo"><img src="assets/images/logo.png" alt="ロゴ"></a>
-      </div>
+        <ul class="l-header__box">
+          <li class="l-header__login">
+            <a href="#" class="l-header__link">Login</a>
+          </li>
+          <li class="l-header__cart">
+            <a href="#" class="l-header__link l-header__link--cart">
+              <img src="assets/images/btn_hdr.png" alt="カート" />
+              <p class="l-header__count">0</p>
+            </a>
+          </li>
+        </ul>
+      </header>
 
-      <ul class="l-header__box">
-        <li class="l-header__login">
-          <a href="#" class="l-header__link">Login</a>
-        </li>
-        <li class="l-header__cart">
-          <a href="#" class="l-header__link l-header__link--cart">
-            <img src="assets/images/btn_hdr.png" alt="カート">
-            <p class="l-header__count">0</p>
-          </a>
-        </li>
-      </ul>
-
-  </header>

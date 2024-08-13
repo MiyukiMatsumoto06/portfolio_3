@@ -17,18 +17,31 @@
     height: 52px;
     border: 2px solid transparent;
     border-radius: 26px;
-    color: #d5a499;
     background-color: #fff;
+    color: #d5a499;
     font-family: 'Noto Sans JP', 'Noto Sans CJK JP', 'Noto Sans Japanese', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W6', 'ヒラギノ角ゴシック', 'Hiragino Sans', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 1;
     text-decoration: none;
+    transition: 0.8s;
+
+    &:hover {
+      border: 2px solid #fff;
+      background-color: #d5a499;
+      color: #fff;
+      transition: 0.5s;
+    }
   }
 
   &__link--reverse {
     color: #fff;
     background-color: #d5a499;
+
+    &:hover {
+      border: 2px solid #fff;
+      box-shadow: 5px 17px 26px rgba(213, 164, 153, 0.7);
+    }
   }
 
   &__link--blank {
@@ -47,6 +60,16 @@
       background-size: cover;
       background-position: center center;
       content: '';
+    }
+
+    &:hover {
+      color: #d5a499;
+      background-color: #fff;
+      border: 2px solid transparent;
+      transition: 0.5s;
+    }
+    &:hover::after {
+      background-image: url(../images/btn_blank_03.svg);
     }
   }
 }

@@ -33,6 +33,16 @@
       transition: transform 0.3s;
       content: '';
     }
+
+    &:hover::after {
+      transform: translateX(-5px);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover .p-news__post {
+      transform: translateX(5px);
+      transition: transform 0.3s ease;
+    }
   }
 
   &__date {

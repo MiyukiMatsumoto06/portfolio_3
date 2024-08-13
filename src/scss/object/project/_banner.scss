@@ -1,12 +1,12 @@
 .p-banner {
-  display: none;
   position: fixed;
   z-index: 80;
   right: 30px;
   bottom: 20px;
   width: 200px;
   height: auto;
-  transition: transform 1s;
+  transform: translateY(150%);
+  transition: transform 1.3s ease;
 
   &__image {
     width: 100%;
@@ -27,7 +27,7 @@
   .p-banner {
     right: 20px;
     bottom: 7px;
-    width: 130px;
+    width: 200px;
 
     &__close {
       width: 20px;
@@ -37,5 +37,11 @@
 
 // JS
 .p-banner.is-active {
-  display: none;
+  transform: translateY(0);
+}
+
+.p-banner.is-close {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
 }

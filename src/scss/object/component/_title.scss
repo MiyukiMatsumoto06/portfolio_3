@@ -1,4 +1,6 @@
 .c-title {
+  overflow: hidden;
+  position: relative;
   text-align: center;
   margin: 0 auto 50px;
   color: #d5a499;
@@ -7,8 +9,6 @@
   font-size: 13px;
   font-size: 1.3rem;
   letter-spacing: 0;
-  transform: translateY(0) rotate(0);
-  transition: transform 0.8s;
 }
 
 .c-title--white {
@@ -20,10 +20,4 @@
   .c-title {
     margin: 0 auto 30px;
   }
-}
-
-// JS
-.c-title.is-active {
-  transform: translateY(0) rotate(0);
-  transition: transform 0.8s;
 }

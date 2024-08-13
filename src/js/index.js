@@ -8,7 +8,7 @@ $(() => {
   const hoge = 'hoge'
   console.log(hoge)
 
-  // ロード
+  // ヒーローフェードイン
   $(() => {
     $('.p-hero__logo').fadeIn(1300, () => {
       $('.p-slider')
@@ -16,29 +16,18 @@ $(() => {
         .animate({ opacity: 1 }, 500, () => {
           $('.p-hero__caption').fadeIn(500, () => {
             $('.p-hero__text').fadeIn(500, () => {
-              $('.p-hero__scroll').fadeIn(500, () => {
-                $('.p-banner').fadeIn(500)
-              })
+              $('.p-about__wrap').addClass('is-active')
+
+              $('.p-hero__scroll').addClass('is-active')
+
+              setTimeout(() => {
+                $('.p-banner').addClass('is-active')
+              }, 1000)
             })
           })
         })
     })
   })
-
-  // $(() => {
-  //   $('.p-hero__logo').fadeIn(2000)
-  //   $('.p-slider').fadeIn(2000)
-  //   $('.p-hero__caption').fadeIn(2000)
-  //   $('.p-hero__text').fadeIn(2000)
-  //   $('.p-hero__scroll').fadeIn(2000)
-  //   $('.p-banner').fadeIn(2000)
-  //   // $('.p-hero__text').addClass('is-load')
-  //   // $('.p-hero__caption').addClass('is-load')
-  //   // $('.p-slider').addClass('is-load')
-  //   // $('.p-hero__logo').addClass('is-load')
-  //   // $('.p-hero__scroll').addClass('is-load')
-  //   // $('.p-banner').addClass('is-load')
-  // })
 
   // メニューボタン
   const menuBg = $('.p-menu__bg')
@@ -67,8 +56,50 @@ $(() => {
   const bannerClose = $('.p-banner__close')
 
   bannerClose.click(() => {
-    banner.toggleClass('is-active')
+    banner.toggleClass('is-close')
   })
+
+  // タイトル
+  const checkScrollTitle = (scrollBottom) => {
+    const scrollTitle = $('._scrollTitle')
+
+    scrollTitle.each((index, element) => {
+      const isActive = $(element).offset().top < scrollBottom
+      if (isActive) {
+        $(element).addClass('_isActiveTitle')
+      } else {
+        $(element).removeClass('_isActiveTitle')
+      }
+    })
+  }
+
+  // ランキングフェードイン
+  const checkScrollRanking = (scrollBottom) => {
+    const productImg = $('.p-product__image')
+
+    productImg.each((index, element) => {
+      const isActive = $(element).offset().top < scrollBottom
+      if (isActive) {
+        $(element).addClass('is-active')
+      } else {
+        $(element).removeClass('is-active')
+      }
+    })
+  }
+
+  // プロダクトイメージオープン
+  const checkScrollOpen = (scrollBottom) => {
+    const ranking = $('.p-ranking__item')
+
+    ranking.each((index, element) => {
+      const isActive = $(element).offset().top < scrollBottom
+      if (isActive) {
+        $(element).addClass('is-active')
+      } else {
+        $(element).removeClass('is-active')
+      }
+    })
+  }
 
   // スライドアップ
   const checkScrollSlideUp = (scrollBottom) => {
@@ -106,6 +137,9 @@ $(() => {
     const windowHeight = $(window).height()
     const scrollBottom = scrollTop + windowHeight
 
+    checkScrollTitle(scrollBottom)
+    checkScrollRanking(scrollBottom)
+    checkScrollOpen(scrollBottom)
     checkScrollSlideUp(scrollBottom)
     checkScrollFadeIn(scrollBottom)
   })
