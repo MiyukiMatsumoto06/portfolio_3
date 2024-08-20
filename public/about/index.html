@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
     <title>ABOUT</title>
-  <link href="../assets/stylesheets/bundle9d0114ba0ae46ccc0ff1.css" rel="stylesheet"></head>
+  <link href="../assets/stylesheets/bundleb15e1d94a34d728b4ce1.css" rel="stylesheet"></head>
   <body>
     <div class="l-wrap">
       <!-- .l-header -->
@@ -75,10 +75,12 @@
               menuItem.classList.add("p-menu__item");
 
               menuItem.innerHTML = `
-        <a href="#" class="p-menu__link">
-            <div class="p-menu__mask"> <p class="p-menu__text">${item}</p></div>
-          </a>
-        `;
+                <a href="#" class="p-menu__link">
+                  <div class="p-menu__mask">
+                    <p class="p-menu__text" data-text="${item}">${item}</p>
+                  </div>
+                </a>
+              `;
               menuList.appendChild(menuItem);
 
               // menu SP表示
@@ -174,5 +176,5 @@
 
   </script>
 
-  <script type="text/javascript" src="../assets/javascripts/bundle9d0114ba0ae46ccc0ff1.js"></script></body>
+  <script type="text/javascript" src="../assets/javascripts/bundleb15e1d94a34d728b4ce1.js"></script></body>
   </html>
